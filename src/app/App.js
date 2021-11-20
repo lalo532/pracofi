@@ -12,12 +12,12 @@ function App() {
           <Route exact path="/">
             <Landing />
           </Route>
-          {/* <Route exact path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
-          <Route exact path="/quote">
-            <QuoteBudget />
-          </Route> */}
+          <Route exact path="/booking">
+            <Booking />
+          </Route>
         </Switch>
       </>
     </Router>
