@@ -6,10 +6,10 @@ const Header = () => {
   const [menuFlag, setMenuFlag] = useState(false);
   return (
     <>
-      <div className="w-fullmt-2 shadow-xl">
-        <div className="w-10/12 mx-auto flex flex-row justify-between">
+      <div className="w-full shadow-xl">
+        <div className="w-10/12  mx-auto flex flex-row justify-between">
           {/* <div className="p-2"> */}
-          <img className="w-2/12  mr-auto" src={BrandLogo} alt="" srcSet="" />
+          <img className="w-2/12 my-2 mr-auto" src={BrandLogo} alt="" srcSet="" />
           {/* </div> */}
           <Menu
             menuFlag={menuFlag}
