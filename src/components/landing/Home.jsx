@@ -7,7 +7,7 @@ import Header from "../global/Header";
 const Home = () => {
   return (
     <>
-      <div className="h-screen">
+      <div className="lg:h-screen">
         <Header />
         <div className="flex flex-col lg:flex-row w-10/12 mx-auto h-full">
           <div className="h-1/2 my-auto">
