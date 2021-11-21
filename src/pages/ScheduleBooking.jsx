@@ -10,12 +10,9 @@ const ScheduleBooking = () => {
 
   const [text, setTxt] = useState("");
   const [txt, setText] = useState("");
-  //   const [txtLength, setTxtLength] = useState("");
-  //   console.log(notEmty);
+
   useEffect(() => {
     setText(text);
-    // console.log(text.length);
-    // setTxtLength(text.length);
   }, [text]);
   console.log(text);
   const handeProced = () => {
@@ -41,12 +38,6 @@ const ScheduleBooking = () => {
         <div className="hidden h-full w-full lg:w-1/2 bg__quote_img lg:flex">
           <img className="w-full h-full" src={Pattern2} alt="" srcSet="" />
           <div className="mt-auto p-6">
-            {/* <button
-              onClick={prev}
-              className="  p-6 border-2 rounded-2xl capitalize text-white"
-            >
-              Anterior
-            </button> */}
           </div>
         </div>
 
@@ -56,13 +47,6 @@ const ScheduleBooking = () => {
           )}
           {step2 && !step3 && <Step2 text={text} setTxt={setTxt} />}
           {step3 && <Step3 />}
-          {/* <button
-            // disabled="disabled"
-            onClick={handeProced}
-            className="w-1/3 ml-auto p-4 bg-orangeCustom"
-          >
-            Proced
-          </button> */}
           <div className="flex flex-row mt-auto p-6 ">
             <div className=" mr-auto ">
               <button
