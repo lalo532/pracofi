@@ -18,7 +18,7 @@ const Home = () => {
               srcSet=""
             />
           </div>
-          <div className="flex flex-col w-1/2 justify-center m-auto">
+          <div className="flex flex-col w-10/12 mt-4 lg:my-auto lg:w-1/2 justify-center mx-auto">
             <div className="flex flex-row mx-auto mb-6">
               <h1 className="text-center text-4xl font-bold text-blue-regular mr-6">
                 ¡Bienvenido a Pracofi!

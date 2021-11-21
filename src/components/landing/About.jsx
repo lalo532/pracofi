@@ -31,7 +31,7 @@ const About = () => {
               </li>
               <li>Fugiat minima ab ut dolorum excepturi dolores voluptas.</li>
             </ul>
-            <button className="w-2/4 mx-auto my-4 uppercase p-6 bg-blue-regular text-white">
+            <button className="w-2/4 mx-auto my-4 uppercase p-6 bg-blue-regular text-white bg-black">
               registrate
             </button>
           </div>
