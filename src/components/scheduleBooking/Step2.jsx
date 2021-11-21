@@ -1,9 +1,11 @@
 import React from "react";
+import { StepIndicator } from "./";
 
 const Step2 = (props) => {
   const { text, setTxt } = props;
   return (
     <>
+      <StepIndicator step={2} />
       <span className="text-4xl mx-auto mb-4">
         Informacion necesaria para continuar
       </span>

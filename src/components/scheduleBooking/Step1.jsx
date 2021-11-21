@@ -1,10 +1,11 @@
 import React from "react";
-import { DatePicker } from "./";
+import { StepIndicator, DatePicker } from "./";
 
 const Step1 = (props) => {
   const { setDate, date, setNotEmty } = props;
   return (
     <>
+      <StepIndicator step={1} />
       <div className="mt-auto flex flex-col">
         <span className="text-4xl mb-4 mx-auto text-center">
           Agenda un cita 🤗
@@ -44,7 +45,6 @@ const Step1 = (props) => {
                 className="italic font-bold font-sans text-red-500"
               /> */}
           </div>
-
         </div>
       </div>
     </>

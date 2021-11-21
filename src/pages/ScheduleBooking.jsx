@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Pattern2 from "../assets/img/pattern2.png";
-import { Step1, Step2, Step3 } from "../components/scheduleBooking/";
+import {
+  Step1,
+  Step2,
+  Step3,
+  // StepIndicator,
+} from "../components/scheduleBooking/";
 
 const ScheduleBooking = () => {
   const [notEmty, setNotEmty] = useState(false);
@@ -42,6 +47,7 @@ const ScheduleBooking = () => {
         </div>
 
         <div className="text-white flex flex-col pt-6 w-full mx-4">
+
           {!step2 && (
             <Step1 setDate={setDate} date={date} setNotEmty={setNotEmty} />
           )}

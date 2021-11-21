@@ -1,8 +1,10 @@
 import React from "react";
+import { StepIndicator } from "./";
 
 const Step3 = () => {
   return (
     <>
+      <StepIndicator step={3} />
       <span className="text-4xl mx-auto mb-4">Nosotros nos encargamos 📝</span>
       <p className="text-2xl">En breve revisaremos su caso.</p>
       <div className="flex flex-col p-4">
