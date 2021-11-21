@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const DatePicker = (props) => {
-  const { setNotEmty } = props;
-  const [date, setDate] = useState("");
+  const { setNotEmty, date, setDate } = props;
+  // const [date, setDate] = useState("");
 
   useEffect(() => {
     setNotEmty(false);
@@ -15,7 +15,7 @@ const DatePicker = (props) => {
   return (
     <>
       <input
-        className="bg-blue-dark border-2 rounded-lg p-2 w-1/2 mx-auto"
+        className="bg-white text-black border-2 rounded-lg p-2 w-2/3 lg:w-1/2 mx-auto"
         type="date"
         id="start"
         name="trip-start"

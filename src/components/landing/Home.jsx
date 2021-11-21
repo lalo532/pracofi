@@ -34,7 +34,7 @@ const Home = () => {
               tu cita y comencemos ahora!
             </p>
             <Link
-              to="/quote"
+              to="/booking"
               className="w-3/4 mx-auto uppercase p-6 bg-black hover:bg-blue-dark text-white text-center"
             >
               Agendar una cita
