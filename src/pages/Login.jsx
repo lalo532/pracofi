@@ -1,15 +1,23 @@
 import React from "react";
 import BrandLogo from "../assets/img/logo.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <>
       <div className="w-screen h-screen flex flex-col bg-white">
-        <div className="h-1/4 flex flex-col py-8">
-          <img className="w-3/4 lg:w-1/4 m-auto" src={BrandLogo} alt="" srcSet="" />
+        <div className="h-1/6 flex flex-col py-8 mb-4">
+          <Link to="/">
+            <img
+              className="w-3/4 lg:w-1/4 m-auto"
+              src={BrandLogo}
+              alt=""
+              srcSet=""
+            />
+          </Link>
         </div>
 
-        <div class="bg-blue-dark shadow-md rounded p-8 flex flex-col m-auto w-10/12 h-2/3 lg:w-1/2 lg:h-2/3">
+        <div class="bg-blue-dark shadow-md rounded p-8 flex flex-col m-auto w-10/12 h-2/3 lg:w-1/2 lg:h-3/4">
           <div className="w-full lg:w-3/4 m-auto">
             <div class="mb-4">
               <label
@@ -47,12 +55,12 @@ const Login = () => {
               >
                 Sign In
               </button>
-              <a
+              <Link
+                to="/register"
                 class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker"
-                href="#"
               >
-                Forgot Password?
-              </a>
+                Create an account firts?
+              </Link>
             </div>
           </div>
         </div>

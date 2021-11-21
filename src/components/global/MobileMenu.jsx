@@ -38,8 +38,8 @@ const MobileMenu = (props) => {
           )}
 
           <li className="my-1">
-            <Link to="/login" className="uppercase">
-              Ingresa
+            <Link to="/register" className="uppercase">
+              Registrarse
             </Link>
           </li>
         </ul>

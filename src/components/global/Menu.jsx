@@ -43,8 +43,8 @@ const Menu = (props) => {
           )}
 
           <li>
-            <Link to="/login" className="uppercase bg-blue-dark rounded-full p-4 text-white font-semibold hover:bg-blue-light">
-              Ingresa
+            <Link to="/register" className="uppercase bg-blue-dark rounded-full p-4 text-white font-semibold hover:bg-blue-light">
+              Registrarse
             </Link>
           </li>
         </ul>
