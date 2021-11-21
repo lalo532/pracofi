@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ScheduleBooking, Bookings, Landing, Login, Register } from "../pages";
+import { ScheduleBooking, Bookings, Profile, Landing, Login, Register } from "../pages";
 
 function App() {
   return (
@@ -23,6 +23,9 @@ function App() {
           </Route>
           <Route exact path="/bookings">
             <Bookings />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
           </Route>
         </Switch>
       </>
