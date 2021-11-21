@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Pattern2 from "../assets/img/pattern2.png";
-import { DatePicker } from "../components/booking/";
+import { DatePicker } from "../components/scheduleBooking";
 
-const Booking = () => {
+const ScheduleBooking = () => {
   const [notEmty, setNotEmty] = useState(false);
   const [date, setDate] = useState("");
   const [step2, setstep2] = useState(false);
@@ -213,4 +213,4 @@ const Booking = () => {
   );
 };
 
-export default Booking;
+export default ScheduleBooking;

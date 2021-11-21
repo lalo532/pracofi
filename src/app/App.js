@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Booking, Dashboard, Landing, Login, Register } from "../pages";
+import { ScheduleBooking, Bookings, Landing, Login, Register } from "../pages";
 
 function App() {
   return (
@@ -18,8 +18,11 @@ function App() {
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route exact path="/booking">
-            <Booking />
+          <Route exact path="/scheduleBooking">
+            <ScheduleBooking />
+          </Route>
+          <Route exact path="/bookings">
+            <Bookings />
           </Route>
         </Switch>
       </>
