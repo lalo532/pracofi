@@ -63,7 +63,7 @@ const HeaderUser = () => {
                 hoverDates ? "bg-gray-800 text-white" : ""
               }   box-border`}
             >
-              <Link to="/dates" className="block">
+              <Link to="/bookings" className="block">
                 <p className="block text-center p-2">Mis Citas</p>
               </Link>
             </div>
@@ -75,7 +75,7 @@ const HeaderUser = () => {
             //     hoverProfile ? "bg-gray-800 text-white" : ""
             //   }  box-border`}
             >
-              <Link to="/profile-data" className="block">
+              <Link to="/profile" className="block">
                 <p className="block text-center p-2">Mi Perfil</p>
               </Link>
             </div>
