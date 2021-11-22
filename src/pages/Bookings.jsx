@@ -5,10 +5,12 @@ import { HeaderUser } from "../components/global/";
 const Bookings = () => {
   return (
     <>
-      <HeaderUser />
-      <div className="flex flex-col w-10/12 m-auto">
-        <BookignsList />
-      </div>
+      {/* <div className="w-full h-full "> */}
+        <HeaderUser />
+        <div className="flex flex-col w-10/12 m-auto">
+          <BookignsList />
+        </div>
+      {/* </div> */}
     </>
   );
 };

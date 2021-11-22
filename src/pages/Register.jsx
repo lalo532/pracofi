@@ -78,12 +78,11 @@ const Register = () => {
             </div>
             <p class="text-white text-xs italic">Comfirm the password.</p>
             <div class="flex items-center justify-between">
-              <button
+              <Link to="/bookings"
                 class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
-                type="button"
               >
                 Sign Up
-              </button>
+              </Link>
               <Link
                 to="/login"
                 class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker"
