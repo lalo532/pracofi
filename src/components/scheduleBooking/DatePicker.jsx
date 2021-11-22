@@ -6,7 +6,7 @@ const DatePicker = (props) => {
 
   useEffect(() => {
     setNotEmty(false);
-    if (date != "") {
+    if (date !== "") {
       setNotEmty(true);
     }
   }, [date]);

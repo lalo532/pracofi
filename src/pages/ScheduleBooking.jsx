@@ -26,7 +26,7 @@ const ScheduleBooking = () => {
       setstep2(true);
       setText("");
     }
-    if (txt != "") {
+    if (txt !== "") {
       // setstep2(false);
       setStep3(true);
     }
