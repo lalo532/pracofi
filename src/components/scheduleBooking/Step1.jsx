@@ -7,7 +7,7 @@ const Step1 = (props) => {
     <>
       <div className="mt-auto flex flex-col">
         <span className="text-4xl mb-4 mx-auto text-center">
-          Agenda un cita 🤗
+          ¡Elije una fecha!
         </span>
         <p className="text-2xl text-center">
           Tomara aproximidamente 5 minutos. ¿Estas listo?
