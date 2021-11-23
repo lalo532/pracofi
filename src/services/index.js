@@ -1,3 +1,4 @@
 import { login } from "./AutService";
+import { RegisterService } from "./RegisterService";
 
-export{login}
+export { login, RegisterService };

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { HeaderForms } from "../components/global/";
+import { HeaderForms } from "../components/global";
 import { Link } from "react-router-dom";
+import { RegisterService } from "../services";
 
 const Register = () => {
-  const [userName, setUserName] = useState("");
+  // const [userName, setUserName] = useState("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -11,6 +12,14 @@ const Register = () => {
   const [paswordConfirm, setPaswordConfirm] = useState("");
 
   // console.log(userName, name, lastName, email, pasword, paswordConfirm);
+  const submit = () => {
+    // console.log("click");
+
+    RegisterService(name, email, pasword).catch((error) => {
+      console.log(error);
+    });
+    // setSenFlag(true);
+  };
 
   return (
     <>
@@ -50,14 +59,14 @@ const Register = () => {
                 class="block text-white text-sm font-bold mb-2"
                 for="username"
               >
-                Username
+                Email
               </label>
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-black"
                 id="username"
                 type="text"
                 placeholder="Username"
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div class="mb-4">
@@ -92,12 +101,13 @@ const Register = () => {
             </div>
             <p class="text-white text-xs italic">Comfirm the password.</p>
             <div class="flex items-center justify-between">
-              <Link
-                to="/bookings"
+              <button
+                // to="/bookings"
+                onClick={submit}
                 class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
               >
-                Sign Up
-              </Link>
+                Registrar
+              </button>
               <Link
                 to="/login"
                 class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker"
