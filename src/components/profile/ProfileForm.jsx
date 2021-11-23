@@ -48,7 +48,7 @@ const ProfileForm = () => {
           />
         </div>
         <div class="mt-2">
-          <label class="hidden text-sm block text-gray-600" for="cus_email">
+          <label class=" text-sm block text-gray-600" for="cus_email">
             City
           </label>
           <input
@@ -62,7 +62,7 @@ const ProfileForm = () => {
           />
         </div>
         <div class="inline-block mt-2 w-1/2 pr-1">
-          <label class="hidden block text-sm text-gray-600" for="cus_email">
+          <label class=" block text-sm text-gray-600" for="cus_email">
             Country
           </label>
           <input
@@ -76,7 +76,7 @@ const ProfileForm = () => {
           />
         </div>
         <div class="inline-block mt-2 -mx-1 pl-1 w-1/2">
-          <label class="hidden block text-sm text-gray-600" for="cus_email">
+          <label class=" block text-sm text-gray-600" for="cus_email">
             Zip
           </label>
           <input

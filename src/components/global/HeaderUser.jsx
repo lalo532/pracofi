@@ -32,7 +32,7 @@ const HeaderUser = () => {
             <Link
               onClick={handleDropDwn}
               onMouseOver={handleDropDwn}
-              className=" w-full overflow-hidden focus:outline-none ml-8 whitespace-nowrap inline-flex items-center justify-center px-0.5 py-2 border border-transparent shadow-sm text-base font-medium text-white bg-mattBlack bg-opacity-75 hover:bg-opacity-100 block"
+              className=" w-full overflow-hidden focus:outline-none ml-8 whitespace-nowrap inline-flex items-center justify-center px-0.5 py-2 border border-transparent shadow-sm text-base font-medium text-white bg-mattBlack bg-opacity-75 hover:bg-opacity-100"
             >
               Mi Cuenta
               {/* <img className="ml-2 w-3 h-3" src={ArrowDonw} alt="" /> */}
