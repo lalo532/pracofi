@@ -1,21 +1,21 @@
 import axios from 'axios';
 export const login = (email, password)=>{
     return axios
-    .post(api_url,{
+    .post("http://localhost:3000/login",{
         email,
         password,
     })
     .then((res)=>{
-        const name = res.data.data.name;
-        const fsurname = res.data.data.first_surname;
-        const sndsurname = res.data.data.second_surname;
-        const fullname = `${name} ${fsurname} ${sndsurname}`;
-        const type = res.data.data.type;
-        console.log(res.data);
+        // const name = res.data.data.name;
+        // const fsurname = res.data.data.first_surname;
+        // const sndsurname = res.data.data.second_surname;
+        // const fullname = `${name} ${fsurname} ${sndsurname}`;
+        // const type = res.data.data.type;
+        console.log(res);
         if(res.data.token){
-            localStorage.setItem('token',JSON.stringify(res.data.token));
-            localStorage.setItem('name',JSON.stringify(fullname));
-            localStorage.setItem('user', JSON.stringify(dataUser));
+            // localStorage.setItem('token',JSON.stringify(res.data.token));
+            // localStorage.setItem('name',JSON.stringify(fullname));
+            // localStorage.setItem('user', JSON.stringify(dataUser));
         }
         return res.data;
     });

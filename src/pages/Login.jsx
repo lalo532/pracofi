@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HeaderForms } from "../components/global/";
 import { Link } from "react-router-dom";
+import { login } from "../services/AutService";
 
 const Login = () => {
+  // useEffect(() => {
+  //   login("arianagrande@gmail.com", "12345");
+  // }, []);
+  const submit = () => {
+    // console.log("click");
+    login("arianagrande@gmail.com", "12345");
+  }
+
   return (
     <>
       <div className="w-screen h-screen flex flex-col bg-white">
@@ -42,6 +51,7 @@ const Login = () => {
               <button
                 class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
                 type="button"
+                onClick={submit}
               >
                 Sign In
               </button>
