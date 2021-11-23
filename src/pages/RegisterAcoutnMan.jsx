@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HeaderForms } from "../components/global/";
+import { HeaderUser } from "../components/global/";
 
 const RegisterAcoutnMan = () => {
   return (
     <>
       <div className="w-screen h-screen flex flex-col bg-white">
-        <HeaderForms />
+        <HeaderUser />
         <div class="bg-blue-dark shadow-md rounded p-8 flex flex-col m-auto w-10/12 h-2/3 lg:w-1/2 lg:h-3/4">
           <div className="w-full lg:w-3/4 m-auto">
             <div class="mb-4">
