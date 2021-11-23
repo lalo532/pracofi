@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeaderForms } from "../components/global/";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const [userName, setUserName] = useState("");
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [pasword, setPasword] = useState("");
+  const [paswordConfirm, setPaswordConfirm] = useState("");
+
+  // console.log(userName, name, lastName, email, pasword, paswordConfirm);
+
   return (
     <>
       <div className="w-screen h-screen flex flex-col bg-white">
@@ -14,10 +23,11 @@ const Register = () => {
                 Name
               </label>
               <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-white"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-black"
                 id="Name"
                 type="text"
                 placeholder="Name"
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div class="mb-4">
@@ -28,10 +38,11 @@ const Register = () => {
                 Last Name
               </label>
               <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-white"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-black"
                 id="LastName"
                 type="text"
                 placeholder="LastName"
+                onChange={(e) => setLastName(e.target.value)}
               />
             </div>
             <div class="mb-4">
@@ -42,10 +53,11 @@ const Register = () => {
                 Username
               </label>
               <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-white"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-black"
                 id="username"
                 type="text"
                 placeholder="Username"
+                onChange={(e) => setUserName(e.target.value)}
               />
             </div>
             <div class="mb-4">
@@ -56,10 +68,11 @@ const Register = () => {
                 Password
               </label>
               <input
-                class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-white"
+                class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-black"
                 id="password"
                 type="password"
                 placeholder="******************"
+                onChange={(e) => setPasword(e.target.value)}
               />
             </div>
             <div class="mb-6">
@@ -70,15 +83,17 @@ const Register = () => {
                 Password
               </label>
               <input
-                class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-white"
+                class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-black"
                 id="ConfirmPassword"
                 type="password"
                 placeholder="******************"
+                onChange={(e) => setPaswordConfirm(e.target.value)}
               />
             </div>
             <p class="text-white text-xs italic">Comfirm the password.</p>
             <div class="flex items-center justify-between">
-              <Link to="/bookings"
+              <Link
+                to="/bookings"
                 class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
               >
                 Sign Up
