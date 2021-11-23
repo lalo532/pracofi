@@ -4,15 +4,17 @@ import { Link } from "react-router-dom";
 import { login } from "../services/AutService";
 
 const Login = () => {
-  const [sendFlag, setSenFlag] = useState(false);
+  // const [sendFlag, setSenFlag] = useState(false);
+  const [email, setEmail] = useState("");
+  const [pasword, setPasword] = useState("");
+
   // useEffect(() => {
   //   login("arianagrande@gmail.com", "12345");
   // }, [sendFlag === true]);
   const submit = () => {
     // console.log("click");
 
-    login("arianagrande@gmail.com", "12345")
-    .catch((error) => {
+    login(email, pasword).catch((error) => {
       console.log(error);
     });
     // setSenFlag(true);
@@ -32,24 +34,27 @@ const Login = () => {
                 Username
               </label>
               <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-white"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-black"
                 id="username"
                 type="text"
                 placeholder="Username"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div class="mb-6">
               <label
                 class="block text-white text-sm font-bold mb-2"
                 for="password"
+             
               >
                 Password
               </label>
               <input
-                class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-white mb-3"
+                class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-black mb-3"
                 id="password"
                 type="password"
                 placeholder="******************"
+                onChange={(e) => setPasword(e.target.value)}
               />
               <p class="text-white text-xs italic">Please choose a password.</p>
             </div>
