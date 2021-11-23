@@ -4,4 +4,8 @@ import Landing from "./Landing";
 import Login from "./Login";
 import Register from "./Register";
 import Profile from "./Profile";
-export { ScheduleBooking, Bookings, Profile, Landing, Login, Register };
+import BookingDetail from "./BookingDetail";
+import AcountManBookingDetail from "./AcountManBookingDetail";
+import RegisterAcoutnMan from "./RegisterAcoutnMan";
+
+export { ScheduleBooking, Bookings, Profile, Landing, Login, Register, BookingDetail, AcountManBookingDetail, RegisterAcoutnMan };

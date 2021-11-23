@@ -1,6 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ScheduleBooking, Bookings, Profile, Landing, Login, Register } from "../pages";
+import {
+  ScheduleBooking,
+  Bookings,
+  Profile,
+  Landing,
+  Login,
+  Register,
+  BookingDetail,
+  AcountManBookingDetail,
+  RegisterAcoutnMan,
+} from "../pages";
 
 function App() {
   return (
@@ -8,7 +18,7 @@ function App() {
       <>
         {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
-          <Switch>
+        <Switch>
           <Route exact path="/">
             <Landing />
           </Route>
@@ -26,6 +36,15 @@ function App() {
           </Route>
           <Route exact path="/profile">
             <Profile />
+          </Route>
+          <Route exact path="/bookingDetails">
+            <BookingDetail />
+          </Route>
+          <Route exact path="/bookingDetails_acountMan">
+            <AcountManBookingDetail />
+          </Route>
+          <Route exact path="/registerAcoutnMan">
+            <RegisterAcoutnMan />
           </Route>
         </Switch>
       </>
