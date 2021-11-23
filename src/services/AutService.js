@@ -6,19 +6,19 @@ export const login = (email, password)=>{
         password,
     })
     .then((res)=>{
-        // const name = res.data.data.name;
-        // const fsurname = res.data.data.first_surname;
-        // const sndsurname = res.data.data.second_surname;
-        // const fullname = `${name} ${fsurname} ${sndsurname}`;
-        // const type = res.data.data.type;
-        console.log(res);
+        const name = res.data.usuario.name;
+        const role = res.data.usuario.role;
+        console.log(res.data.token);
         if(res.data.token){
-            // localStorage.setItem('token',JSON.stringify(res.data.token));
-            // localStorage.setItem('name',JSON.stringify(fullname));
-            // localStorage.setItem('user', JSON.stringify(dataUser));
+            localStorage.setItem('token',JSON.stringify(res.data.token));
+            localStorage.setItem('name',JSON.stringify(name));
+            localStorage.setItem('role', JSON.stringify(role));
         }
         return res.data;
-    });
+    })
+    .catch((error) =>{
+        console.log(error);
+    })
 };
 
 

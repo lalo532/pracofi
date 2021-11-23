@@ -1,16 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { HeaderForms } from "../components/global/";
 import { Link } from "react-router-dom";
 import { login } from "../services/AutService";
 
 const Login = () => {
+  const [sendFlag, setSenFlag] = useState(false);
   // useEffect(() => {
   //   login("arianagrande@gmail.com", "12345");
-  // }, []);
+  // }, [sendFlag === true]);
   const submit = () => {
     // console.log("click");
-    login("arianagrande@gmail.com", "12345");
-  }
+
+    login("arianagrande@gmail.com", "12345")
+    .catch((error) => {
+      console.log(error);
+    });
+    // setSenFlag(true);
+  };
 
   return (
     <>
