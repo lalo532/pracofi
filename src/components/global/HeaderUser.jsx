@@ -69,11 +69,11 @@ const HeaderUser = () => {
             </div>
 
             <div
-            //   onMouseOver={handleHoverProfile}
-            //   onMouseLeave={() => setHoverProfile(false)}
-            //   className={`bg-gray-200 w-full h-1/2 block ${
-            //     hoverProfile ? "bg-gray-800 text-white" : ""
-            //   }  box-border`}
+              onMouseOver={handleHoverProfile}
+              onMouseLeave={() => setHoverProfile(false)}
+              className={`bg-gray-200 w-full h-1/2 block ${
+                hoverProfile ? "bg-gray-800 text-white" : ""
+              }  box-border`}
             >
               <Link to="/profile" className="block">
                 <p className="block text-center p-2">Mi Perfil</p>
