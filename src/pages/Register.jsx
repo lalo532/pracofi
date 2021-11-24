@@ -19,7 +19,7 @@ const Register = () => {
 
     RegisterService(name, email, pasword)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.ok) {
           history.push("/login");
         }

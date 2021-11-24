@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { HeaderForms } from "../components/global/";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { login } from "../services/AutService";
 
 const Login = () => {
   // const [sendFlag, setSenFlag] = useState(false);
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [pasword, setPasword] = useState("");
 
@@ -14,9 +15,16 @@ const Login = () => {
   const submit = () => {
     // console.log("click");
 
-    login(email, pasword).catch((error) => {
-      console.log(error);
-    });
+    login(email, pasword)
+      .then((res) => {
+        // console.log(res);
+        if (res.ok) {
+          history.push("/bookings");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     // setSenFlag(true);
   };
 
@@ -45,7 +53,6 @@ const Login = () => {
               <label
                 class="block text-white text-sm font-bold mb-2"
                 for="password"
-             
               >
                 Password
               </label>
