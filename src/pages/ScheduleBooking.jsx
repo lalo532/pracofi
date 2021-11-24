@@ -37,7 +37,7 @@ const ScheduleBooking = () => {
   // console.log(isOnZMG, " Step3 Data");
 
   const senBooking = () => {
-    RegisterBooking("nombrePruebaHardcodeado", "apellido igual de hardcodeado", topic, date, dateTime, "areadepruebaigual", "rfcdepruebaxD")
+    RegisterBooking("nombrePruebaHardcodeado", "apellido igual de hardcodeado", topic, date , "areadepruebaigual", "rfcdepruebaxD")
       .then((res) => {
         console.log(res);
       })
@@ -135,7 +135,7 @@ const ScheduleBooking = () => {
               ) : (
                 <button
                   // disabled="disabled"
-                  // onClick={handeProced}
+                  onClick={handeProced}
                   className="  p-6 border-2 rounded-2xl capitalize text-white"
                 >
                   Siguiente
