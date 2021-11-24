@@ -8,7 +8,7 @@ export const login = (email, password)=>{
     })
     .then((res)=>{
         console.log(res);
-        const name = res.data.usuario.name;
+        const name = res.data.usuario.nombre;
         const role = res.data.usuario.role;
         console.log(res.data.token);
         if(res.data.token){
