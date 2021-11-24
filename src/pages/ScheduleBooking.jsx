@@ -7,7 +7,7 @@ import {
   Step3,
   // StepIndicator,
 } from "../components/scheduleBooking/";
-import { getToken } from "../services/AutService";
+import { getToken } from "../services/";
 import { useHistory } from "react-router-dom";
 import { notPresentToken } from "../helpers";
 

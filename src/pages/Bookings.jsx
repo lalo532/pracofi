@@ -3,7 +3,7 @@ import { Booking } from "./";
 import moment from "moment";
 import { BookignsList, GeneratePDF } from "../components/bokings/";
 import { HeaderUser } from "../components/global/";
-import { getToken } from "../services/AutService";
+import { getToken } from "../services/";
 import { useHistory } from "react-router-dom";
 import { notPresentToken } from "../helpers";
 

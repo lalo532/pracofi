@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import UserIcon from "../../assets/img/icons/user.svg";
 import Logo from "../../assets/img/logo.png";
-
+import { logout } from "../../services/";
 const HeaderUser = () => {
   const [openNav, setOpenNav] = useState(false);
   const [openDropDnw, setOpenDropDnw] = useState(false);
@@ -18,7 +18,7 @@ const HeaderUser = () => {
     setOpenNav(!openNav);
   };
   const handleDropDwn = () => {
-    setOpenDropDnw(!openNav);
+    setOpenDropDnw(!openDropDnw);
   };
   const handleHoverDates = () => {
     setHoverDates(!hoverDates);
@@ -85,7 +85,7 @@ const HeaderUser = () => {
           <div
             onMouseLeave={() => setOpenDropDnw(false)}
             className={`absolute w-32 ml-8 mr-10  z-10  bg-gray-200 ${
-              openDropDnw ? "" : "hidden"
+              openDropDnw ? "absolute" : "hidden"
             }`}
           >
             <div
@@ -128,8 +128,8 @@ const HeaderUser = () => {
       </div>
 
       <div
-        onMouseLeave={() => setOpenDropDnw(false)}
-        className={`w-full bg-gray-200 ${openNav ? "" : "hidden"}`}
+        onMouseLeave={() => setOpenNav(false)}
+        className={`w-full lg:hidden bg-gray-200 ${openNav ? "block" : "hidden"}`}
       >
         <div
           onMouseOver={handleHoverDates}
