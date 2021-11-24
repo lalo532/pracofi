@@ -8,6 +8,7 @@ const HeaderUser = () => {
   const [openDropDnw, setOpenDropDnw] = useState(false);
   const [hoverDates, setHoverDates] = useState(false);
   const [hoverProfile, setHoverProfile] = useState(false);
+  const [userName, setUserName] = useState(localStorage.getItem("name").replaceAll('"', ""));
   //   const [currentUser, setCurrentUser] = useState(authenticationService.currentUserValue);
 
   const handleNav = () => {
@@ -85,7 +86,7 @@ const HeaderUser = () => {
       <div className="flex flex-row w-10/12 mx-auto my-2">
         <img className="w-16 mr-6" src={UserIcon} alt="" srcSet="" />
         <p className="my-auto text-2xl py-2">
-          <span className="font-bold">Bienvenido: </span>Nombre de usuario
+          <span className="font-bold">Bienvenido: </span>{userName}
         </p>
       </div>
     </>
