@@ -3,7 +3,7 @@ import React from "react";
 const ProfileForm = () => {
   return (
     <>
-      <form class="w-1/2 mx-auto p-10 bg-white rounded shadow-xl">
+      <form class="w-10/12 lg:w-1/2 mx-auto p-10 bg-white rounded shadow-xl">
         <p class="text-gray-800 font-medium mb-4">Datos prersonales</p>
         <div class="">
           <label class="block text-sm text-gray-600" for="cus_name">
