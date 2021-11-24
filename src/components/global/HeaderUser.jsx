@@ -38,11 +38,11 @@ const HeaderUser = () => {
           <button
             type="button"
             onClick={handleNav}
-            className={`w-full rounded-md p-2 inline-flex items-center justify-center`}
+            className={`w-full rounded-md inline-flex items-center justify-center`}
           >
             <span className="sr-only">Open menu</span>
             <svg
-              className="h-6 w-6 m-auto"
+              className="h-6 w-6 my-auto ml-auto"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
