@@ -7,6 +7,8 @@ import {
   Step3,
   // StepIndicator,
 } from "../components/scheduleBooking/";
+import { getToken } from "../services/AutService";
+import { useHistory } from "react-router-dom";
 
 const ScheduleBooking = () => {
   const [notEmty, setNotEmty] = useState(false);
@@ -16,6 +18,14 @@ const ScheduleBooking = () => {
 
   const [text, setTxt] = useState("");
   const [txt, setText] = useState("");
+
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!getToken()) {
+      history.push("/");
+    }
+  }, [getToken()]);
 
   useEffect(() => {
     setText(text);
@@ -47,7 +57,6 @@ const ScheduleBooking = () => {
         </div>
 
         <div className="text-white flex flex-col pt-6 w-full mx-4">
-
           {!step2 && (
             <Step1 setDate={setDate} date={date} setNotEmty={setNotEmty} />
           )}

@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Booking } from "./";
 import moment from "moment";
 import { BookignsList, GeneratePDF } from "../components/bokings/";
 import { HeaderUser } from "../components/global/";
+import { getToken } from "../services/AutService";
+import { useHistory } from "react-router-dom";
 
 const Bookings = () => {
+  const history = useHistory();
   const [bookings, setBookings] = useState({});
   const [openModal, setOpenModal] = useState(true);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState({});
   const [loadingUser, setLoadingUser] = useState(true);
+
   let is_lawyer;
   moment.locale("es");
   let currentDate = moment().format();
@@ -27,6 +31,13 @@ const Bookings = () => {
       }
     });
   }
+
+  useEffect(() => {
+    if (!getToken()) {
+      history.push("/");
+    }
+  }, [getToken()]);
+
   return (
     <>
       <div className="w-full h-full">
