@@ -7,6 +7,7 @@ const HeaderUser = () => {
   const [openNav, setOpenNav] = useState(false);
   const [openDropDnw, setOpenDropDnw] = useState(false);
   const [hoverDates, setHoverDates] = useState(false);
+  const [hoverSchedule, setHoverSchedule] = useState(false);
   const [hoverProfile, setHoverProfile] = useState(false);
   const [userName, setUserName] = useState(localStorage.getItem("name").replaceAll('"', ""));
   //   const [currentUser, setCurrentUser] = useState(authenticationService.currentUserValue);
@@ -20,6 +21,10 @@ const HeaderUser = () => {
   const handleHoverDates = () => {
     setHoverDates(!hoverDates);
   };
+  const handleHoverSchedule = () => {
+    setHoverSchedule(!hoverSchedule);
+  };
+
 
   const handleHoverProfile = () => {
     setHoverProfile(!hoverProfile);
@@ -66,6 +71,18 @@ const HeaderUser = () => {
             >
               <Link to="/bookings" className="block">
                 <p className="block text-center p-2">Mis Citas</p>
+              </Link>
+            </div>
+
+            <div
+              onMouseOver={handleHoverSchedule}
+              onMouseLeave={() => setHoverSchedule(false)}
+              className={`bg-gray-200 w-full h-1/2 block ${
+                hoverSchedule ? "bg-gray-800 text-white" : ""
+              }   box-border`}
+            >
+              <Link to="/scheduleBooking" className="block">
+                <p className="block text-center p-2">Agendar Cita</p>
               </Link>
             </div>
 
