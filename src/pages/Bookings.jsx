@@ -29,26 +29,26 @@ const Bookings = () => {
   }
   return (
     <>
-      {/* <div className="w-full h-full "> */}
-      <HeaderUser />
-      <GeneratePDF />
-      <div className="flex flex-col w-10/12 m-auto">
-        <div className="space-x-4 flex h-14 inline-block flex-row flex-row mb-7">
-          <div className="flex-grow-0 mt-auto">
-            <h3>Próximas citas</h3>
+      <div className="w-full h-full">
+        <HeaderUser />
+        <GeneratePDF />
+        <div className="flex flex-col w-10/12 m-auto">
+          <div className="space-x-4 flex h-14 inline-block flex-row flex-row mb-7">
+            <div className="flex-grow-0 mt-auto">
+              <h3>Próximas citas</h3>
+            </div>
+            <div className="flex-grow h-0.5 bg-gray-300 mt-auto m-2"></div>
           </div>
-          <div className="flex-grow h-0.5 bg-gray-300 mt-auto m-2"></div>
-        </div>
-        <BookignsList />
-        <div className="space-x-4 flex h-14 inline-block flex-row mb-7">
-          <div className="flex-grow-0 mt-auto">
-            <h3>Citas pasadas</h3>
-          </div>
+          <BookignsList />
+          <div className="space-x-4 flex h-14 inline-block flex-row mb-7">
+            <div className="flex-grow-0 mt-auto">
+              <h3>Citas pasadas</h3>
+            </div>
 
-          <div className="flex-grow h-0.5 bg-gray-300 mt-auto m-2"></div>
+            <div className="flex-grow h-0.5 bg-gray-300 mt-auto m-2"></div>
+          </div>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 };
