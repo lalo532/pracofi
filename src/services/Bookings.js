@@ -5,16 +5,19 @@ export const getBookings = () => {
     return response;
 }
 
-export const RegisterBooking = (nombre, email, password) => {
+export const RegisterBooking = (nombre, apellidos, motivo, fecha_cita, area, rfc) => {
   // const history = useHistory();
   return axios
     .post("http://localhost:4200/registro_cita", {
       nombre,
-      email,
-      password,
+      apellidos,
+      motivo,
+      fecha_cita,
+      area,
+      rfc
     })
     .then((res) => {
-      //   console.log(res);
+        console.log(res);
       // const name = res.data.usuario.name;
       // const role = res.data.usuario.role;
       // const name = res.data.usuario.name;

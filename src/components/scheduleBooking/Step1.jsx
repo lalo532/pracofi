@@ -2,7 +2,7 @@ import React from "react";
 import { StepIndicator, DatePicker } from "./";
 
 const Step1 = (props) => {
-  const { setDate, date, setNotEmty } = props;
+  const { date, setNotEmty, setDateTime, setDate, setTopic } = props;
   return (
     <>
       <StepIndicator step={1} />
@@ -14,9 +14,14 @@ const Step1 = (props) => {
           Tomara aproximidamente 5 minutos. ¿Estas listo?
         </p>
         <div className="flex flex-col p-4">
-          <DatePicker setDate={setDate} date={date} setNotEmty={setNotEmty} />
+          <DatePicker
+            setDate={setDate}
+            date={date}
+            setDateTime={setDateTime}
+            setNotEmty={setNotEmty}
+          />
           <div className="flex flex-col my-1">
-            <label className="block mx-auto mb-2">
+            <label className="block mx-auto mb-2">setTopic
               <span className="text-white  font-semibold">
                 Motivo de consulta
               </span>
@@ -27,8 +32,11 @@ const Step1 = (props) => {
               // value={values.reason}
               // onChange={handleChange}
               // onBlur={handleBlur}
+              onChange={(e) => setTopic(e.target.value)}
             >
-              <option>Seleccione</option>
+              <option disabled>Seleccione</option>
+              <option>Opcion1</option>
+              <option>Opcion2</option>
               {/* {loading ? (
                   <option>Cargando...</option>
                 ) : (

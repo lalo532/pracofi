@@ -1,7 +1,20 @@
 import React from "react";
 import { StepIndicator } from "./";
 
-const Step3 = () => {
+const Step3 = (props) => {
+  const { setIsOnZMG } = props;
+
+  const handleIsOnZMG = (type) => () => {
+    {
+      // console.log(type);
+      if (type === "si") {
+        setIsOnZMG(true);
+      } else if (type === "no") {
+        setIsOnZMG(false);
+      }
+    }
+  };
+
   return (
     <>
       <StepIndicator step={3} />
@@ -16,14 +29,14 @@ const Step3 = () => {
             <div className="flex flex-col">
               <button
                 // disabled="disabled"
-                // onClick={handeProced}
+                onClick={handleIsOnZMG("si")}
                 className=" p-4 rounded-2xl border-2 my-2"
               >
                 Si
               </button>
               <button
                 // disabled="disabled"
-                // onClick={handeProced}
+                onClick={handleIsOnZMG("no")}
                 className=" p-4 rounded-2xl border-2 my-2"
               >
                 No

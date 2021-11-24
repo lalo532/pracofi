@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const DatePicker = (props) => {
-  const { setNotEmty, date, setDate } = props;
+  const { setNotEmty, date, setDate, setDateTime } = props;
   // const [date, setDate] = useState("");
 
   useEffect(() => {
@@ -43,6 +43,7 @@ const DatePicker = (props) => {
           // onChange={handleChange}
           // onBlur={handleBlur}
           className="bg-white text-black border-2 rounded-lg p-2 w-2/3 lg:w-1/2 mx-auto"
+          onChange={(e) => setDateTime(e.target.value)}
         />
       </div>
     </>

@@ -1,5 +1,5 @@
 import { login, getToken, logout } from "./AutService";
 import { RegisterService } from "./RegisterService";
-import { getBookings } from "./Bookings";
+import { getBookings, RegisterBooking } from "./Bookings";
 
-export { login, getToken, RegisterService, logout, getBookings };
+export { login, getToken, RegisterService, logout, getBookings, RegisterBooking };
