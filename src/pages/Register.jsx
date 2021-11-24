@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { HeaderForms } from "../components/global";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { RegisterService } from "../services";
 
 const Register = () => {
   // const [userName, setUserName] = useState("");
+  const history = useHistory();
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,9 +17,17 @@ const Register = () => {
   const submit = () => {
     // console.log("click");
 
-    RegisterService(name, email, pasword).catch((error) => {
-      console.log(error);
-    });
+    RegisterService(name, email, pasword)
+      .then((res) => {
+        console.log(res);
+        if (res.ok) {
+          history.push("/login");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // history.push("/bookings");
     // setSenFlag(true);
   };
 
