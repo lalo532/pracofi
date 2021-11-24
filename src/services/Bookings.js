@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getBookings = () => {
-    const response = axios.get("http://localhost:4200/mostrar_citas", config);
+    const response = axios.get("http://localhost:4200/mostrar_citas");
     return response;
 }
 

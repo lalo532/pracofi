@@ -2,27 +2,22 @@ import { useState } from "react";
 import { Booking } from "./";
 import moment from "moment";
 
-const BookignsList = () => {
-
+const BookignsList = (props) => {
+  const { bookings } = props;
+  // console.log(bookings);
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasdadasd"} />
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasdasdasd"} />
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasdasdas"} />
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasd"} />
-        <Booking algo={"asdasdadas"} />
-        <Booking algo={"asdasdasdssssssssssssaaaaaaaaaaaaaa"} />
-        <Booking algo={"asdasdasdas"} />
-        <Booking algo={"asdasd"} />
+        {
+          bookings?.map((booking) =>{
+            console.log(booking);
+            return (
+              <Booking booking={booking} />
+            )
+          })
+        }
+
       </div>
     </>
   );

@@ -3,13 +3,13 @@ import { Booking } from "./";
 import moment from "moment";
 import { BookignsList, GeneratePDF } from "../components/bokings/";
 import { HeaderUser } from "../components/global/";
-import { getToken } from "../services/";
+import { getToken, getBookings } from "../services/";
 import { useHistory } from "react-router-dom";
 import { notPresentToken } from "../helpers";
 
 const Bookings = () => {
   const history = useHistory();
-  const [bookings, setBookings] = useState({});
+  const [bookings, setBookings] = useState([]);
   const [openModal, setOpenModal] = useState(true);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState({});
@@ -34,6 +34,17 @@ const Bookings = () => {
   }
 
   useEffect(() => {
+    getBookings()
+      .then((res) => {
+        // console.log(res);
+        setBookings(res.data.result)
+      })
+      .catch((error) => {
+        // console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
     if (!getToken()) {
       notPresentToken();
       history.push("/login");
@@ -52,7 +63,7 @@ const Bookings = () => {
             </div>
             <div className="flex-grow h-0.5 bg-gray-300 mt-auto m-2"></div>
           </div>
-          <BookignsList />
+          <BookignsList bookings={bookings} />
           <div className="space-x-4 flex h-14 inline-block flex-row mb-7">
             <div className="flex-grow-0 mt-auto">
               <h3>Citas pasadas</h3>
