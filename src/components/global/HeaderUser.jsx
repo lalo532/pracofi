@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import UserIcon from "../../assets/img/icons/user.svg";
 import Logo from "../../assets/img/logo.png";
 import { logout } from "../../services/";
+
 const HeaderUser = () => {
+  const history = useHistory();
   const [openNav, setOpenNav] = useState(false);
   const [openDropDnw, setOpenDropDnw] = useState(false);
   const [hoverDates, setHoverDates] = useState(false);
@@ -29,6 +31,10 @@ const HeaderUser = () => {
 
   const handleHoverProfile = () => {
     setHoverProfile(!hoverProfile);
+  };
+  const logoutSession = () => {
+    logout();
+    history.push("/");
   };
   return (
     <>
@@ -72,14 +78,13 @@ const HeaderUser = () => {
           </div>
 
           <div className="inline-block w-32">
-            <Link
-              to="/"
-              // onClick={logout}
-
+            <button
+              // to="/"
+              onClick={logoutSession}
               className="w-full ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-base font-medium text-white bg-blue-dark bg-opacity-75 hover:bg-opacity-100"
             >
               Cerrar Sesión
-            </Link>
+            </button>
           </div>
 
           <div
@@ -129,7 +134,9 @@ const HeaderUser = () => {
 
       <div
         onMouseLeave={() => setOpenNav(false)}
-        className={`w-full lg:hidden bg-gray-200 ${openNav ? "block" : "hidden"}`}
+        className={`w-full lg:hidden bg-gray-200 ${
+          openNav ? "block" : "hidden"
+        }`}
       >
         <div
           onMouseOver={handleHoverDates}
@@ -165,6 +172,13 @@ const HeaderUser = () => {
           <Link to="/profile" className="block">
             <p className="block text-center p-2">Mi Perfil</p>
           </Link>
+          <button
+            // to="/"
+            onClick={logoutSession}
+            className="w-full  whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-base font-medium text-white bg-blue-dark bg-opacity-75 hover:bg-opacity-100"
+          >
+            Cerrar Sesión
+          </button>
         </div>
       </div>
 
