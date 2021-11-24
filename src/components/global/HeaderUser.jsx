@@ -9,7 +9,9 @@ const HeaderUser = () => {
   const [hoverDates, setHoverDates] = useState(false);
   const [hoverSchedule, setHoverSchedule] = useState(false);
   const [hoverProfile, setHoverProfile] = useState(false);
-  const [userName, setUserName] = useState(localStorage.getItem("name").replaceAll('"', ""));
+  const [userName, setUserName] = useState(
+    localStorage.getItem("name").replaceAll('"', "")
+  );
   //   const [currentUser, setCurrentUser] = useState(authenticationService.currentUserValue);
 
   const handleNav = () => {
@@ -25,7 +27,6 @@ const HeaderUser = () => {
     setHoverSchedule(!hoverSchedule);
   };
 
-
   const handleHoverProfile = () => {
     setHoverProfile(!hoverProfile);
   };
@@ -33,6 +34,31 @@ const HeaderUser = () => {
     <>
       <div className="flex flex-row w-11/12 mx-auto my-2">
         <img className="h-24 my-auto" src={Logo} alt="" srcset="" />
+        <div className="w-full flex flex-row lg:hidden">
+          <button
+            type="button"
+            onClick={handleNav}
+            className={`w-full rounded-md p-2 inline-flex items-center justify-center`}
+          >
+            <span className="sr-only">Open menu</span>
+            <svg
+              className="h-6 w-6 m-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
         <div className="hidden lg:block md:w-6/12 lg:w-4/12 xl:w-3/12 ml-auto my-auto">
           <div className="inline-block w-32 mr-10">
             <Link
@@ -100,10 +126,53 @@ const HeaderUser = () => {
           </div>
         </div>
       </div>
+
+      <div
+        onMouseLeave={() => setOpenDropDnw(false)}
+        className={`w-full bg-gray-200 ${openNav ? "" : "hidden"}`}
+      >
+        <div
+          onMouseOver={handleHoverDates}
+          onMouseLeave={() => setHoverDates(false)}
+          className={`bg-gray-200 w-full h-1/2 block ${
+            hoverDates ? "bg-gray-800 text-white" : ""
+          }   box-border`}
+        >
+          <Link to="/bookings" className="block">
+            <p className="block text-center p-2">Mis Citas</p>
+          </Link>
+        </div>
+
+        <div
+          onMouseOver={handleHoverSchedule}
+          onMouseLeave={() => setHoverSchedule(false)}
+          className={`bg-gray-200 w-full h-1/2 block ${
+            hoverSchedule ? "bg-gray-800 text-white" : ""
+          }   box-border`}
+        >
+          <Link to="/scheduleBooking" className="block">
+            <p className="block text-center p-2">Agendar Cita</p>
+          </Link>
+        </div>
+
+        <div
+          onMouseOver={handleHoverProfile}
+          onMouseLeave={() => setHoverProfile(false)}
+          className={`bg-gray-200 w-full h-1/2 block ${
+            hoverProfile ? "bg-gray-800 text-white" : ""
+          }  box-border`}
+        >
+          <Link to="/profile" className="block">
+            <p className="block text-center p-2">Mi Perfil</p>
+          </Link>
+        </div>
+      </div>
+
       <div className="flex flex-row w-10/12 mx-auto my-2">
         <img className="w-16 mr-6" src={UserIcon} alt="" srcSet="" />
         <p className="my-auto text-2xl py-2">
-          <span className="font-bold">Bienvenido: </span>{userName}
+          <span className="font-bold">Bienvenido: </span>
+          {userName}
         </p>
       </div>
     </>
