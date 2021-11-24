@@ -32,7 +32,7 @@ const Login = () => {
     <>
       <div className="w-screen h-full min-h-screen flex flex-col bg-white">
         <HeaderForms />
-        <div class="bg-blue-dark shadow-md rounded p-8 flex flex-col m-auto w-10/12 h-2/3 lg:w-1/2 lg:h-3/4">
+        <div class="bg-blue-dark shadow-md rounded p-8 flex flex-col mx-auto w-10/12  lg:w-1/2 h-full mb-auto ">
           <div className="w-full lg:w-3/4 m-auto">
             <div class="mb-4">
               <label
