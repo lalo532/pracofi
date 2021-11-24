@@ -4,7 +4,7 @@ import axios from "axios";
 export const RegisterService = (nombre, email, password) => {
   // const history = useHistory();
   return axios
-    .post("http://localhost:3000/register", {
+    .post("http://localhost:4200/register", {
       nombre,
       email,
       password,
