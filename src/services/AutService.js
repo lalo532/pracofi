@@ -7,6 +7,7 @@ export const login = (email, password)=>{
         password,
     })
     .then((res)=>{
+        console.log(res);
         const name = res.data.usuario.name;
         const role = res.data.usuario.role;
         console.log(res.data.token);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Booking } from "./";
 import moment from "moment";
-import { BookignsList } from "../components/bokings/";
+import { BookignsList, GeneratePDF } from "../components/bokings/";
 import { HeaderUser } from "../components/global/";
 
 const Bookings = () => {
@@ -31,6 +31,7 @@ const Bookings = () => {
     <>
       {/* <div className="w-full h-full "> */}
       <HeaderUser />
+      <GeneratePDF />
       <div className="flex flex-col w-10/12 m-auto">
         <div className="space-x-4 flex h-14 inline-block flex-row flex-row mb-7">
           <div className="flex-grow-0 mt-auto">

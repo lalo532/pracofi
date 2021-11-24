@@ -1,4 +1,5 @@
 import Booking from "./Booking";
 import BookignsList from "./BookignsList";
+import GeneratePDF from "./GeneratePDF";
 
-export { Booking, BookignsList };
+export { Booking, BookignsList, GeneratePDF };
