@@ -9,6 +9,7 @@ import {
 } from "../components/scheduleBooking/";
 import { getToken } from "../services/AutService";
 import { useHistory } from "react-router-dom";
+import { notPresentToken } from "../helpers";
 
 const ScheduleBooking = () => {
   const [notEmty, setNotEmty] = useState(false);
@@ -23,7 +24,8 @@ const ScheduleBooking = () => {
 
   useEffect(() => {
     if (!getToken()) {
-      history.push("/");
+      notPresentToken();
+      history.push("/login");
     }
   }, [getToken()]);
 

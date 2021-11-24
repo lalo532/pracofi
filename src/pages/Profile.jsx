@@ -3,13 +3,15 @@ import { HeaderUser } from "../components/global/";
 import { ProfileForm } from "../components/profile/";
 import { getToken } from "../services/AutService";
 import { useHistory } from "react-router-dom";
+import { notPresentToken } from "../helpers";
 
 const Profile = () => {
   const history = useHistory();
 
   useEffect(() => {
     if (!getToken()) {
-      history.push("/");
+      notPresentToken();
+      history.push("/login");
     }
   }, [getToken()]);
   return (

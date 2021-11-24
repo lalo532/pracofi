@@ -5,6 +5,7 @@ import { BookignsList, GeneratePDF } from "../components/bokings/";
 import { HeaderUser } from "../components/global/";
 import { getToken } from "../services/AutService";
 import { useHistory } from "react-router-dom";
+import { notPresentToken } from "../helpers";
 
 const Bookings = () => {
   const history = useHistory();
@@ -34,7 +35,8 @@ const Bookings = () => {
 
   useEffect(() => {
     if (!getToken()) {
-      history.push("/");
+      notPresentToken();
+      history.push("/login");
     }
   }, [getToken()]);
 
