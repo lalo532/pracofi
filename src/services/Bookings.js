@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 export const getBookings = () => {
-    const response = axios.get("http://localhost:3000/register", config);
+    const response = axios.get("http://localhost:4200/register", config);
     return response;
 }
 
 export const RegisterBooking = (nombre, email, password) => {
   // const history = useHistory();
   return axios
-    .post("http://localhost:3000/register", {
+    .post("http://localhost:4200/register", {
       nombre,
       email,
       password,
